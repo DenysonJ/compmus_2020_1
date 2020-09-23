@@ -16,9 +16,9 @@ int main(int c, char** argv)
 
     // OSCILLATOR
     // sine wave
-    float freq = 261.62; // C3 // Midi note 48
+    float freq = 444; // C3 // Midi note 48
 
-    float amp = 0.8f;    
+    float amp = 0.7f;    
     for (int n=0; n<buffer_len; n++)
     {
        audio_buffer[n] = amp * sin(2*M_PI*freq*(n/Fs)); 
