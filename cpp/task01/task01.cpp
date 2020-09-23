@@ -29,8 +29,17 @@ int main(int c, char** argv)
     cout << "copying stereo into two mono..." << endl;
     for (int i=0; i<buffer_len; i+=2)
     {
-        // TODO
+        right[i/2] = audio_buffer[i];
+        left[i/2] = audio_buffer[i+1];
     }
+    cout << "putting into a file" << endl;
+
+    write_wave_file("right.wav", right, buffer_len/2, sample_rate);
+    write_wave_file("left.wav", left, buffer_len/2, sample_rate);
+
+    delete [] audio_buffer;
+    delete [] right;
+    delete [] left;
 
     cout << "done." << endl;
     return 0;
