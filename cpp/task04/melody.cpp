@@ -91,16 +91,28 @@ int main(int c, char** argv)
 
     //===============================
     SineOscillator* s1 = new SineOscillator(60, 0.5, Fs);
-    MusicNote m1(s1, 0.0f, 5.0f);
+    MusicNote m1(s1, 0.0f, 4.0f);
     notes.push_back(m1);
 
     SineOscillator* s2 = new SineOscillator(67, 0.5, Fs);
-    MusicNote m2(s2, 2.0f, 7.0f);
+    MusicNote m2(s2, 2.0f, 3.0f);
     notes.push_back(m2);
 
-    SineOscillator* s3 = new SineOscillator(69, 0.5, Fs);
-    MusicNote m3(s3, 6.0f, 8.0f);
+    SineOscillator* s3 = new SineOscillator(64, 0.5, Fs);
+    MusicNote m3(s3, 4.0f, 6.0f);
     notes.push_back(m3);
+
+    SineOscillator* s4 = new SineOscillator(62, 0.5, Fs);
+    MusicNote m4(s4, 6.0f, 8.0f);
+    notes.push_back(m4);
+
+    SineOscillator* s5 = new SineOscillator(60, 0.5, Fs);
+    MusicNote m5(s5, 7.0f, 9.0f);
+    notes.push_back(m5);
+
+    SineOscillator* s6 = new SineOscillator(65, 0.5, Fs);
+    MusicNote m6(s6, 10.0f, 11.0f);
+    notes.push_back(m6);
 
 
     //===============================
